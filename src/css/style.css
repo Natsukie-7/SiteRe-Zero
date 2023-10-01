@@ -1,2 +1,80 @@
 /* Fontes de escrita */
 @import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Junge&display=swap');
+
+:root {
+    --cor-texto: #ffffffff;
+    --cor-fundo: #000000;
+}
+
+body {
+    background-color: black;
+}
+
+/* Main */
+main::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    min-height: 100vh;
+    width: 80vw;
+
+    background: rgb(2, 1, 3);
+    background: linear-gradient(125deg, rgba(2, 1, 3, 0.8912394662921348) 35%, rgba(183, 184, 196, 0) 43%, rgba(255, 255, 255, 0) 100%);
+}
+
+main .personagem {
+    display: none;
+    height: 100vh;
+}
+
+main .personagem.selecionado {
+    display: block;
+}
+
+main .personagem .imagem {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+main .personagem .conteudo {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 5%;
+    min-height: 100vh;
+    max-width: 30%;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+}
+
+.conteudo .nome-personagem {
+    color: var(--cor-texto);
+    font-size: 15vh;
+    font-family: "Junge";
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.conteudo .descricao {
+    color: var(--cor-texto);
+    font-size: min(2vh, 10vw);
+    line-height: 2.1vh;
+
+    max-height: 60vh;
+    overflow-y: auto;
+}
+
+/* logo */
+.conteudo .logo {
+    background-image: url("../imagens/Logo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    height: 20vh;
+    width: 40vh;
+}
