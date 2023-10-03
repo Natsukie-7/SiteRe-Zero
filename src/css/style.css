@@ -8,6 +8,7 @@
 
 body {
     background-color: black;
+    overflow: hidden;
 }
 
 /* Main */
@@ -44,7 +45,7 @@ main .personagem .conteudo {
     top: 0;
     left: 5%;
     min-height: 100vh;
-    max-width: 30%;
+    max-width: 40vw;
 
     display: flex;
     flex-direction: column;
@@ -61,12 +62,12 @@ main .personagem .conteudo {
 }
 
 .conteudo .descricao {
+    font-family: cinzel;
     color: var(--cor-texto);
-    font-size: min(2vh, 10vw);
-    line-height: 2.1vh;
+    font-size: 2.7vh;
+    line-height: 2.5vh;
 
     max-height: 60vh;
-    overflow-y: auto;
 }
 
 /* logo */
@@ -76,5 +77,39 @@ main .personagem .conteudo {
     background-repeat: no-repeat;
     object-fit: cover;
     height: 20vh;
-    width: 40vh;
+    width: 40vw;
+}
+
+/* botoes */
+.botoes {
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 22vw;
+    align-items: center;
+    justify-content: center;
+    gap: 2vh;
+}
+
+.botoes .botao {
+    border: none;
+    background: none;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.botoes .botao img {
+    max-width: 8vw;
+    max-height: 10vh;
+    border-radius: 50%;
+}
+
+.botoes .botao.ativo {
+    transform: scale(1.25);
+    box-shadow: 0 0 4vw var(--cor-texto);
 }
